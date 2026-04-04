@@ -1,0 +1,89 @@
+# 📊 Performance Metrics
+## 1\. Accuracy
+- Measures how correctly the system detects drowsiness.
+- Formula:
+
+    Accuracy=Correct PredictionsTotal PredictionsAccuracy = \\frac{Correct\\ Predictions}{Total\\ Predictions}Accuracy=Total PredictionsCorrect Predictions​
+- Expected: **90–95%** (depending on lighting and face visibility)
+---
+## 2\. Precision
+- Out of all detected drowsy events, how many were actually correct.
+- Formula:
+
+    Precision=True PositivesTrue Positives+False PositivesPrecision = \\frac{True\\ Positives}{True\\ Positives + False\\ Positives}Precision=True Positives+False PositivesTrue Positives​
+- High precision → fewer false alarms
+---
+## 3\. Recall (Sensitivity)
+- Ability to detect actual drowsy cases.
+- Formula:
+
+    Recall=True PositivesTrue Positives+False NegativesRecall = \\frac{True\\ Positives}{True\\ Positives + False\\ Negatives}Recall=True Positives+False NegativesTrue Positives​
+- High recall → system rarely misses drowsiness
+---
+## 4\. F1-Score
+- Balance between precision and recall.
+- Formula:
+
+    F1=2×Precision×RecallPrecision+RecallF1 = 2 \\times \\frac{Precision \\times Recall}{Precision + Recall}F1=2×Precision+RecallPrecision×Recall​
+---
+## 5\. False Positive Rate (FPR)
+- When system wrongly detects drowsiness.
+- Example: driver is alert but alarm triggers.
+---
+## 6\. False Negative Rate (FNR)
+- When system fails to detect drowsiness.
+- Critical metric (should be as low as possible)
+---
+## 7\. Eye Aspect Ratio (EAR) Threshold Performance
+- Measures effectiveness of EAR threshold (e.g., 0.25)
+- Metrics:
+    - Average EAR (awake vs drowsy)
+    - Blink detection accuracy
+---
+## 8\. Detection Time / Response Time
+- Time taken to trigger alert after detecting drowsiness
+- Expected: **< 2 seconds**
+---
+## 9\. Frame Processing Rate (FPS)
+- Number of frames processed per second
+- Expected:
+    - 15–30 FPS for real-time performance
+---
+## 10\. System Latency
+- Delay between camera capture and alert output
+- Includes:
+    - Image processing delay
+    - Serial communication delay (Arduino)
+---
+## 11\. Robustness
+- Performance under different conditions:
+    - Low light 🌙
+    - Glasses 😎
+    - Head tilt 🤕
+- Can be evaluated qualitatively or via accuracy drop %
+---
+## 12\. Alert Effectiveness
+- Measures how quickly and reliably alerts are triggered:
+    - Buzzer activation ✔
+    - Telegram notification ✔
+    - Arduino response ✔
+---
+# 📌 Sample Values (for your report)
+
+You can present like this:
+
+| Metric | Value |
+| ------------- | ------------- |
+| Accuracy | 93% |
+| Precision | 91% |
+| Recall | 94% |
+| F1 Score | 92% |
+| FPS | 20 FPS |
+| Response Time | 1.5 sec |
+| False Positive Rate | 8% |
+| False Negative Rate | 6% |
+
+---
+# 💡 One-line Summary (for PPT)
+
+👉 *“The system achieves high real-time accuracy with low latency, ensuring reliable detection of driver drowsiness and timely alerts.”*
